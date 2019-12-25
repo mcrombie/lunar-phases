@@ -1,38 +1,142 @@
-.App {
+/* --------------------------------- */
+/* BASE */
+/* --------------------------------- */
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  /*font-size:10px; /*root font-size for converting to em*/
+  font-size: 62.5%;
+
+}
+
+.App{
+  background-color: var(--primary-color);
+  color: var(--moon-color);
+  height:100vh;
+}
+
+/* --------------------------------- */
+/* VARIABLES */
+/* --------------------------------- */
+
+:root {
+  --primary-color: #1e272e;
+  --secondary-color: #485460;
+  --moon-color: #d2dae2;
+}
+
+/* --------------------------------- */
+/* TYPOGRAPHY */
+/* --------------------------------- */
+#title{
   text-align: center;
+  font-size:5rem;
+  padding:1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#phase-title{
+  text-align: center;
+  font-size:3rem;
+  padding:1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#description{
+  padding:2rem;
+  font-size:1.6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* --------------------------------- */
+/* CONTAINER CARDS - CONTAIN TITLE AND DESCRIPTION */
+/* --------------------------------- */
+
+.card{
+  position:absolute;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background-color:var(--secondary-color);
+  width:70%;
+  margin:auto;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#description-card{
+  height:20rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --------------------------------- */
+/* MOON CONTAINER AND MOON ELEMENT */
+/* --------------------------------- */
+
+
+
+#moon{
+  position:absolute;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  background-color: var(--moon-color);
+
 }
+
+/* --------------------------------- */
+/* BUTTONS */
+/* --------------------------------- */
+
+.btn{
+  position:absolute;
+  top:40%;
+  transform:translate(-50%,-50%);
+  background-color:var(--primary-color);
+  
+
+  border-top: 5rem solid transparent;
+	
+	border-bottom: 5rem solid transparent;
+}
+.btn:hover{
+  cursor:pointer;
+  opacity:35%;
+  transition:all .4s;
+  /* transform:scale(1.2); */
+}
+
+
+#back-btn{
+  border-right: 5rem solid var(--secondary-color);
+}
+#forward-btn{
+  border-left: 5rem solid var(--secondary-color);
+}
+
+#back-btn:active{
+  transform: translate(-65%,-50%);
+}
+#forward-btn:active{
+  transform: translate(-35%,-50%);
+}
+
+
+/* --------------------------------- */
+/* POSITIONING OF ELEMENTS */
+/* --------------------------------- */
+
+#title-card{
+  top:10%;
+}
+#back-btn{
+  left:20%;
+}
+#forward-btn{
+  left:80%;
+}
+#moon{
+  top:40%;
+}
+#description-card{
+  top:80%;
+}
+
