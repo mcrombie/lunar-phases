@@ -69,17 +69,90 @@ html {
 /* MOON CONTAINER AND MOON ELEMENT */
 /* --------------------------------- */
 
-
-
 #moon{
   position:absolute;
   left:50%;
   transform:translate(-50%,-50%);
+}
+
+.new-moon{
   width:20rem;
   height:20rem;
   border-radius: 50%;
-  background-color: var(--moon-color);
+  opacity:0;
+}
 
+.waxing-crescent{
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: rotate(90deg);
+
+  /* I set 2 shadows where the first one doesn't have blur and spread for firefox fix. */
+  box-shadow: inset -3.2rem 0px var(--moon-color), inset -3.2rem 0px 0px 0px var(--moon-color);
+  -moz-box-shadow: inset -3.2rem 0px var(--moon-color), inset -3.2rem 0px 0px 0px var(--moon-color);
+}
+
+.first-quarter{
+  width:10rem;
+  height:20rem;
+  border-radius: 0rem 20rem 20rem 0rem;
+
+  background-color:var(--moon-color);
+}
+
+.waxing-gibbous{
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  border:1px transparent var(--primary-color);
+  background-color: var(--moon-color);
+  transform: rotate(90deg);
+
+  /* I set 2 shadows where the first one doesn't have blur and spread for firefox fix. */
+  box-shadow: inset 3.2rem 0px var(--primary-color), inset 3.2rem 0rem 1px 0rem var(--primary-color);
+  -moz-box-shadow: inset -3.2rem 0px var(--moon-color), inset -3.2rem 0px 0px 0px var(--moon-color);
+}
+
+.full-moon{
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  background-color:var(--moon-color);
+}
+
+.waning-gibbous{
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  border:1px transparent var(--primary-color);
+  background-color: var(--moon-color);
+  transform: rotate(90deg);
+
+  /* I set 2 shadows where the first one doesn't have blur and spread for firefox fix. */
+  box-shadow: inset -3.2rem 0px var(--primary-color), inset -3.2rem 0rem 1px 0rem var(--primary-color);
+  -moz-box-shadow: inset -3.2rem 0px var(--moon-color), inset -3.2rem 0px 0px 0px var(--moon-color);
+}
+
+
+.last-quarter{
+  width:10rem;
+  height:20rem;
+  border-radius: 20rem 0rem 0rem 20rem;
+  background-color:var(--moon-color);
+}
+
+.waning-crescent{
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: rotate(90deg);
+
+  /* I set 2 shadows where the first one doesn't have blur and spread for firefox fix. */
+  box-shadow: inset 3.2rem 0px var(--moon-color), inset 3.2rem 0px 0px 0px var(--moon-color);
+  -moz-box-shadow: inset -3.2rem 0px var(--moon-color), inset -3.2rem 0px 0px 0px var(--moon-color);
 }
 
 /* --------------------------------- */
